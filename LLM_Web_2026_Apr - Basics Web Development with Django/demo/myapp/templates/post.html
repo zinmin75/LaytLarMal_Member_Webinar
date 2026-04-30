@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Post</title>
+</head>
+
+<body>
+
+    <!-- Navbar (same as home) -->
+    <div style="background:#333; padding:10px;">
+        <a href="/" style="color:white; margin-right:15px;">Home</a>
+        <a href="/post/" style="color:white;">Post</a>
+    </div>
+
+    <h1>Posts</h1>
+
+    {% for post in posts %}
+    <div>
+        <h2>{{ post.title }}</h2>
+        <p><strong>Date:</strong> {{ post.date }}</p>
+        <p>{{ post.content }}</p>
+    </div>
+    <hr>
+    {% endfor %}
+</body>
+
+</html>
